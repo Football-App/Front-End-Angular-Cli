@@ -1,11 +1,18 @@
 import { Team } from './team';
+import { StadiumInfo } from './stadiuminfo';
 
 export class Partido {
-    iId : String;
-	sDescription : String;
-	dPlayDate : String;
+    iid : number;
+	sdescription : String;
+	tplaydate : Date;
+	tplaytime : Date;
+	sresult : String;
+	sscore : String;
+	iredCards : number;
+	iutcoffset : number;
+	iyellowCards : number;
 	team1 : Team;
 	team2 : Team;
-	sResult : String;
-	sScore : String;
+	stadiumInfo : StadiumInfo;
+	
 }

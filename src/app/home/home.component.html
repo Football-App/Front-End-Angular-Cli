@@ -1,32 +1,36 @@
-<div class="row">
+<div id="content">
 
-  <div>
-    <div ngbDropdown class="d-inline-block">
-      <button class="btn btn-outline-primary" id="dropdownMenu1" ngbDropdownToggle>Seleccione la Ciudad</button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li *ngFor="let ciudad of ciudades" [class.selected]="ciudad === ciudadSeleccionada" (click)="onSelect(ciudad)">
-          {{ciudad.nombre}}
-        </li>
-      </div>
-  </div>
+  <div class="row">
+
+    <div class="col-md-12">
+        <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownMenu1" ngbDropdownToggle>Seleccione la Ciudad</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li *ngFor="let ciudad of ciudades" [class.selected]="ciudad === ciudadSeleccionada" (click)="onSelect(ciudad)">
+            {{ciudad.nombre}}
+            </li>
+        </div>
+    </div>
 
 </div>
 
 <div class="row">
 
-  <div>
+  <div class="col-md-12"> 
     <div *ngIf="ciudadSeleccionada">
       <h2>
         Partidos en la cuidad de {{ciudadSeleccionada.nombre}} 
       </h2>
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let partido of partidos">
-         {{partido.team1.sName}} <img src="{{partido.team1.sCountryFlag}}">  
-         {{partido.sScore}} 
-        <img src="{{partido.team2.sCountryFlag}}">  {{partido.team2.sName}} 
+         {{partido.team1.sname}} <img src="{{partido.team1.scountryFlag}}">  
+         {{partido.sscore}} 
+        <img src="{{partido.team2.scountryFlag}}">  {{partido.team2.sname}} 
+         - Estadio: {{partido.stadiumInfo.sstadiumName}} 
         </li>
       </ul>
     </div>
   </div>
+</div>
 </div>
 </div>

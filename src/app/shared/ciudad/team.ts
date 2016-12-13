@@ -1,6 +1,8 @@
 export class Team {
 
-    iId : String;
-	sName : String;
-	sCountryFlag : String;
+    iid : String;
+	sname : String;
+	scountryFlag : String;
+	scountryFlagLarge : String;
+	swikipediaURL : String;
 }

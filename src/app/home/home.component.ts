@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   ciudades: Ciudad[];
   ciudadSeleccionada: Ciudad;
-  partidos: Ciudad[];
+  partidos: Partido[];
   mensajeError: string;
 
   constructor(private ciudadService: CiudadService) { }
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   }
 
   getPartidosXCiudad(ciudad : Ciudad): void { 
-    //if (!ciudad) { return; }
+    if (!ciudad) { return; }
     this.ciudadService.getPartidosXCiudad(ciudad).subscribe(
           partidos => this.partidos = partidos,
           error =>  this.mensajeError = <any>error);

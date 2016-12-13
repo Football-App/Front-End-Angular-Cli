@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule,JsonpModule  } from '@angular/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-import {routing} from './app.routing';
+import {AppRoutingModule} from './app.routing.module';
 import {MainModule} from './main/main.module';
 import {HomeModule} from './home/home.module';
 import { AppComponent } from './app.component';
@@ -18,13 +18,15 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     JsonpModule,
-    routing,
 
     NgbModule.forRoot(),
 
     MainModule,
-    HomeModule
-
+    HomeModule,
+    
+    AppRoutingModule
+    
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
